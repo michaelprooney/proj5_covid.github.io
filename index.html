@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  width: 640px;
+  margin: 40px auto 0 auto;
+}
+</style>
+    <title>Project 4: Biblical Cross References</title>
+  <body>
+    <h1>Exploring the World's "First Hyper-linked Text"</h1>
+    <h3>Visualizations created by Michael Rooney</h3>
+    <h4>Biblical Network Data Exploration</h4>
+
+    <p>
+      Similar themes, words, events, or people appear across the bible. Cross-references between these for the sake of this project are considered links with each of the chapters being nodes. There are roughly 63,000 links in this data set. 
+    </p>
+    
+    <p>
+      <a href=https://www.openbible.info/labs/cross-references/visualization>These visualizations</a> were the inspiration for the exploration of biblical cross-references for this assignment. Specifically, I admired the visuals and wanted to try and display the same or similar data in a better and more interactive way. 
+      By navigating to this link, you can also find and download the cross-references raw data. If you want to see how I parsed the data and created these visuals, please navigate to my <a href=https://observablehq.com/d/db414cb6ae45928e>observable notebook</a>.
+    </p>
+    
+    
+    <p><b>My hypothesis is the most popular type of cross reference will be between the old and new testament as opposed to within each (undirected).</b> 
+    </p>
+   
+    <div id="observablehq-viewof-start-82591c69"></div>
+    <div id="observablehq-viewof-end-82591c69"></div>
+    <div id="observablehq-graph_usa-82591c69"></div>
+    <div id="observablehq-viewof-selector-82591c69"></div>
+    <div id="observablehq-line_chart-82591c69"></div>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/ca7b8e688370c3cc.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "viewof start") return new Inspector(document.querySelector("#observablehq-viewof-start-82591c69"));
+      if (name === "viewof end") return new Inspector(document.querySelector("#observablehq-viewof-end-82591c69"));
+      if (name === "graph_usa") return new Inspector(document.querySelector("#observablehq-graph_usa-82591c69"));
+      if (name === "viewof selector") return new Inspector(document.querySelector("#observablehq-viewof-selector-82591c69"));
+      if (name === "line_chart") return new Inspector(document.querySelector("#observablehq-line_chart-82591c69"));
+      return ["time_relevant","filtered","radius_measurements","origin_dest_pairs","top10airports","lookup","links","temp_plot_dot","id_lookup","top100links","airport_set","getFieldByKey","arrow_data","createDictionary","selected_data","maxValue"].includes(name);
+    });
+    </script>
+   
+
+  </body> 
+</html>
