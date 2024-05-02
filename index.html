@@ -83,50 +83,76 @@
 
     
     <h2>Flight Cancellations (January 1, 2020 - July 1, 2020)</h2>  
+
+    <table>
+      <tr>
+        <td>
+          <div id="observablehq-viewof-start-8b9356f7"></div>
+        </td>
+        <td>     
+          <div id="observablehq-viewof-end-8b9356f7"></div>
+        </td>
+      </tr>
+<!--       row 1 -->
+      <tr>
+        <td colspan="2">
+          <div id="observablehq-viewof-mysnapslider3-8b9356f7"></div>
+        </td>
+      </tr>
+<!--       row 2 -->
+      <tr>
+        <td colspan="2">
+          <div id="observablehq-viewof-routes-8b9356f7"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div id="observablehq-swatches-8b9356f7"></div>
+        </td>
+      </tr>
+<!--       row 3 -->
+      <tr>
+        <td>
+          <div id="observablehq-flights_d3-8b9356f7"></div>
+        </td>
+        <td>
+          <div id="observablehq-viewof-selector-8b9356f7"></div>
+          <div id="observablehq-line_chart-8b9356f7"></div>
+        </td>
+      </tr>
+<!--       row 4 -->
+      <tr>
+        <td colspan="2">
+          <div id="observablehq-percent_table-8b9356f7"></div>
+        </td>
+      </tr>
+    </table>
+  
     
-    <div id="observablehq-viewof-start-f4e421e8"></div>
-    <div id="observablehq-viewof-end-f4e421e8"></div>
-    <div id="observablehq-viewof-mysnapslider3-f4e421e8"></div>
-    <div id="observablehq-viewof-routes-f4e421e8"></div>
-    <div id="observablehq-swatches-f4e421e8"></div>
-<!--     <p>Credit: <a href="https://observablehq.com/d/ca7b8e688370c3cc@833">2020: COVID Airline Trends by Michael Rooney&#039;s Workspace</a></p> -->
+  
+   
+<!--     <p>Credit: <a href="https://observablehq.com/d/ca7b8e688370c3cc@840">2020: COVID Airline Trends by Michael Rooney&#039;s Workspace</a></p> -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/ca7b8e688370c3cc@833.js?v=4";
+    import define from "https://api.observablehq.com/d/ca7b8e688370c3cc@840.js?v=4";
     new Runtime().module(define, name => {
-      if (name === "viewof start") return new Inspector(document.querySelector("#observablehq-viewof-start-f4e421e8"));
-      if (name === "viewof end") return new Inspector(document.querySelector("#observablehq-viewof-end-f4e421e8"));
-      if (name === "viewof mysnapslider3") return new Inspector(document.querySelector("#observablehq-viewof-mysnapslider3-f4e421e8"));
-      if (name === "viewof routes") return new Inspector(document.querySelector("#observablehq-viewof-routes-f4e421e8"));
-      if (name === "swatches") return new Inspector(document.querySelector("#observablehq-swatches-f4e421e8"));
-      return ["line_chart","time_relevant","filtered","radius_measurements","origin_dest_pairs","top10airports","lookup","links","set_top10airports","temp_plot_dot","id_lookup","top100links","airport_set","flights_d3","chooseToShow","graph_usa","top10_percentage_cancellations","getFieldByKey","arrow_data","createDictionary","set_top10percentage","max","min"].includes(name);
+      if (name === "viewof start") return new Inspector(document.querySelector("#observablehq-viewof-start-8b9356f7"));
+      if (name === "viewof end") return new Inspector(document.querySelector("#observablehq-viewof-end-8b9356f7"));
+      if (name === "viewof mysnapslider3") return new Inspector(document.querySelector("#observablehq-viewof-mysnapslider3-8b9356f7"));
+      if (name === "viewof routes") return new Inspector(document.querySelector("#observablehq-viewof-routes-8b9356f7"));
+      if (name === "swatches") return new Inspector(document.querySelector("#observablehq-swatches-8b9356f7"));
+      if (name === "flights_d3") return new Inspector(document.querySelector("#observablehq-flights_d3-8b9356f7"));
+      if (name === "viewof selector") return new Inspector(document.querySelector("#observablehq-viewof-selector-8b9356f7"));
+      if (name === "line_chart") return new Inspector(document.querySelector("#observablehq-line_chart-8b9356f7"));
+      if (name === "percent_table") return new Inspector(document.querySelector("#observablehq-percent_table-8b9356f7"));
+      // if (name === "airline_table") return new Inspector(document.querySelector("#observablehq-airline_table-8b9356f7"));
+      return ["time_relevant","filtered","radius_measurements","origin_dest_pairs","top10airports","lookup","links","set_top10airports","temp_plot_dot","id_lookup","top100links","airport_set","chooseToShow","graph_usa","top10_percentage_cancellations","getFieldByKey","arrow_data","createDictionary","set_top10percentage","max","min","selected_data","maxValue"].includes(name);
     });
     </script>
 
-    <div class="container">
-      <div class="item">
-        <div id="observablehq-flights_d3-f4e421e8"></div>
-      </div>
-      <div class="item">
-        <div id="observablehq-viewof-selector-f4e421e8"></div>
-        <div id="observablehq-line_chart-f4e421e8"></div>
-      </div>
-    </div>
-    <div id="observablehq-percent_table-c137e78c"></div>
     
-    <script type="module">
-      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-      import define from "https://api.observablehq.com/d/ca7b8e688370c3cc@833.js?v=4";
-      new Runtime().module(define, name => {
-        if (name === "flights_d3") return new Inspector(document.querySelector("#observablehq-flights_d3-f4e421e8"));
-        if (name === "viewof selector") return new Inspector(document.querySelector("#observablehq-viewof-selector-f4e421e8"));
-        if (name === "line_chart") return new Inspector(document.querySelector("#observablehq-line_chart-f4e421e8"));
-        if (name === "percent_table") return new Inspector(document.querySelector("#observablehq-percent_table-c137e78c"));
-        return ["viewof selector", "selected_data", "maxValue"].includes(name);
-      });
-    </script>
 
    
    
