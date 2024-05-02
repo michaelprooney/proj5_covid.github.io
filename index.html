@@ -3,10 +3,41 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  width: 640px;
-  margin: 40px auto 0 auto;
-}
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .item {
+    width: 48%; /* Adjust the width of the items as needed */
+    margin-bottom: 20px;
+  }
+  svg {
+  	font-family: sans-serif;
+  }
+  
+  rect.overlay {
+  	stroke: black;
+  }
+  
+  rect.selection {
+  	stroke: none;
+    fill: steelblue;
+    fill-opacity: 0.6;
+  }
+  
+  #labelleft, #labelright {
+  	dominant-baseline: hanging;
+    font-size: 12px;
+  }
+  
+  #labelleft {
+  	text-anchor: end;
+  }
+  
+  #labelright {
+  	text-anchor: start;
+  }
 </style>
     <title>Project 5: COVID Flights Cancellations</title>
   <body>
@@ -51,27 +82,53 @@ body {
     </p>
 
     
-    <h2>Flight Cancellations (January 1, 2020 - July 1, 2020)</h2>   
-    <div id="observablehq-viewof-start-82591c69"></div>
-    <div id="observablehq-viewof-end-82591c69"></div>
-    <div id="observablehq-graph_usa-82591c69"></div>
-    <div id="observablehq-viewof-selector-82591c69"></div>
-    <div id="observablehq-line_chart-82591c69"></div>
+    <h2>Flight Cancellations (January 1, 2020 - July 1, 2020)</h2>  
     
+    <div id="observablehq-viewof-start-f4e421e8"></div>
+    <div id="observablehq-viewof-end-f4e421e8"></div>
+    <div id="observablehq-viewof-mysnapslider3-f4e421e8"></div>
+    <div id="observablehq-viewof-routes-f4e421e8"></div>
+    <div id="observablehq-swatches-f4e421e8"></div>
+<!--     <p>Credit: <a href="https://observablehq.com/d/ca7b8e688370c3cc@833">2020: COVID Airline Trends by Michael Rooney&#039;s Workspace</a></p> -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/ca7b8e688370c3cc.js?v=4";
+    import define from "https://api.observablehq.com/d/ca7b8e688370c3cc@833.js?v=4";
     new Runtime().module(define, name => {
-      if (name === "viewof start") return new Inspector(document.querySelector("#observablehq-viewof-start-82591c69"));
-      if (name === "viewof end") return new Inspector(document.querySelector("#observablehq-viewof-end-82591c69"));
-      if (name === "graph_usa") return new Inspector(document.querySelector("#observablehq-graph_usa-82591c69"));
-      if (name === "viewof selector") return new Inspector(document.querySelector("#observablehq-viewof-selector-82591c69"));
-      if (name === "line_chart") return new Inspector(document.querySelector("#observablehq-line_chart-82591c69"));
-      return ["time_relevant","filtered","radius_measurements","origin_dest_pairs","top10airports","lookup","links","temp_plot_dot","id_lookup","top100links","airport_set","getFieldByKey","arrow_data","createDictionary","selected_data","maxValue"].includes(name);
+      if (name === "viewof start") return new Inspector(document.querySelector("#observablehq-viewof-start-f4e421e8"));
+      if (name === "viewof end") return new Inspector(document.querySelector("#observablehq-viewof-end-f4e421e8"));
+      if (name === "viewof mysnapslider3") return new Inspector(document.querySelector("#observablehq-viewof-mysnapslider3-f4e421e8"));
+      if (name === "viewof routes") return new Inspector(document.querySelector("#observablehq-viewof-routes-f4e421e8"));
+      if (name === "swatches") return new Inspector(document.querySelector("#observablehq-swatches-f4e421e8"));
+      return ["line_chart","time_relevant","filtered","radius_measurements","origin_dest_pairs","top10airports","lookup","links","set_top10airports","temp_plot_dot","id_lookup","top100links","airport_set","flights_d3","chooseToShow","graph_usa","top10_percentage_cancellations","getFieldByKey","arrow_data","createDictionary","set_top10percentage","max","min"].includes(name);
     });
     </script>
+
+    <div class="container">
+      <div class="item">
+        <div id="observablehq-flights_d3-f4e421e8"></div>
+      </div>
+      <div class="item">
+        <div id="observablehq-viewof-selector-f4e421e8"></div>
+        <div id="observablehq-line_chart-f4e421e8"></div>
+      </div>
+    </div>
+    <div id="observablehq-percent_table-c137e78c"></div>
+    
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/d/ca7b8e688370c3cc@833.js?v=4";
+      new Runtime().module(define, name => {
+        if (name === "flights_d3") return new Inspector(document.querySelector("#observablehq-flights_d3-f4e421e8"));
+        if (name === "viewof selector") return new Inspector(document.querySelector("#observablehq-viewof-selector-f4e421e8"));
+        if (name === "line_chart") return new Inspector(document.querySelector("#observablehq-line_chart-f4e421e8"));
+        if (name === "percent_table") return new Inspector(document.querySelector("#observablehq-percent_table-c137e78c"));
+        return ["viewof selector", "selected_data", "maxValue"].includes(name);
+      });
+    </script>
+
+   
    
 
   </body> 
